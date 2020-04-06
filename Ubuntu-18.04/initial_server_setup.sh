@@ -6,7 +6,7 @@ set -euo pipefail
 ########################
 
 # Name of the user to create and grant sudo privileges
-USERNAME=sammy
+USERNAME=jitsi
 
 # Whether to copy over the root user's `authorized_keys` file to the new sudo
 # user.
@@ -69,6 +69,11 @@ if sshd -t -q; then
     systemctl restart sshd
 fi
 
-# Add exception for SSH and then enable UFW firewall
+# Add exception for SSH, http, https
+# Then enable UFW firewall and show status
 ufw allow OpenSSH
+ufw allow http
+ufw allow https
+ufw allow in 10000:20000/udp
 ufw --force enable
+ufw status
