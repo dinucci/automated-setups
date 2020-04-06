@@ -3,7 +3,9 @@
 Please do beforehand:
 
 sudo su -
+
 apt-get update && apt-get upgrade -y
+
 reboot
 
 Then run the script
