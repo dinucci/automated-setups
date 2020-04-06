@@ -77,3 +77,26 @@ ufw allow https
 ufw allow in 10000:20000/udp
 ufw --force enable
 ufw status
+
+# Install Java OpenJDK
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt update
+sudo apt install openjdk-8-jre-headless nginx -y
+java -version
+
+# Install Nginx
+# sudo apt install nginx -y
+
+systemctl start nginx
+systemctl enable nginx
+systemctl status nginx
+
+# Install Jitsi Meet
+
+sudo wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add - 
+sudo echo 'deb https://download.jitsi.org stable/' >> /etc/apt/sources.list.d/jitsi-stable.list
+
+sudo apt update
+sudo apt install jitsi-meet -y
+
+sudo sh /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
