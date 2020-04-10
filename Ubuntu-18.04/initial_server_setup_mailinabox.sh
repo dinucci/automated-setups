@@ -1,6 +1,16 @@
 #!/bin/bash
 set -euo pipefail
 
+#####################################
+######### PRE-REQUIREMENTS ##########
+#####################################
+
+# Valid Domain Name e.g (box.yourdomain.com)
+# Whitelisted IP
+# Check your IP is not Blacklisted @ MXToolBox: https://mxtoolbox.com/
+# For more information please read https://mailinabox.email/guide.html#checklist
+
+
 ########################
 ### SCRIPT VARIABLES ###
 ########################
