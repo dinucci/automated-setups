@@ -1,5 +1,8 @@
 # Scripts
 
+Each script is intented to use in a separate VPS with a plain install of Ubuntu 18.04 LTS Server 
+
+
 Please do beforehand:
 
 sudo su -
@@ -8,7 +11,9 @@ apt-get update && apt-get upgrade -y
 
 reboot
 
-Then run the script
+Then run the scripts.
+
+
 
 
 ## initial_server_setup_jitsi.sh
